@@ -5,7 +5,8 @@ function greeter(person) {
 
 function message()
 {
-    alert("5000毫秒了")
+    //alert("5000毫秒了")
+	document.getElementById("chengzi").innerHTML += ("5000毫秒了");
 }
 
 function timer()

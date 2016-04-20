@@ -1,40 +1,23 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-    <head>
-        <meta charset="utf-8"/>
-		<link rel="icon" href="favicon.ico"  type="image/x-icon" />
-        <link rel="stylesheet" href="mycss.css">
-        <script src="./myScript1.js"></script>
-    <body>
-        <div>
-            <canvas id="canvas" ></canvas>
-            <script type="text/javascript" src="./myScript.js"></script>
-        </div>
-        <div>
-            <p id="chengzi">
-        </div>
-        <div class="table-style">
-            <table>
-                <tbody>
-                    <tr><td>1</td><td>2</td><td>3</td></tr>
-                    <tr><td>1</td><td>2</td><td>3</td></tr>
-                    <tr><td>1</td><td>2</td><td>3</td></tr>
-                </tbody>
-            </table>
-        </div>
-        <div class="center-img">
-            <p style="text-align: center;">
-                <img src="pp.jpg" alt="Pastry">
-            </p>
-            <!--<span style="align-content: center;">
-                <img src="pp.jpg" alt="Pastry">
-            </span>-->
-        </div>
-        <div>
-            <!--使用视频标签-->
-            <video src="1111.mp4"  controls="controls"></video>
-            <!--自动播放-->
-            <!--<video src="1111.mp4" autoplay="autoplay" controls="controls"></video>-->
-        </div>
-        </body>    
-</html>
+---
+layout: default
+---
+
+<div class="home">
+
+  <h1 class="page-heading">Posts</h1>
+
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+</div>
+  <a href="demo/index.html">DEMO</a>
