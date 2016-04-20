@@ -1,0 +1,24 @@
+.center-img{
+    margin: auto;
+}
+.center-img img{
+    margin: auto;
+    border: solid blue 2px;
+    /*text-align: center;*/
+}
+.table-style{
+    margin: auto;/*div居中*/
+    background: aliceblue;
+}
+.table-style table{
+    border-collapse: collapse;
+    border: none;
+    text-align: center;
+    margin: auto;/*div中table居中*/    
+}
+.table-style td{
+    border: solid salmon 1px;
+    font-size: 1cm;
+    width: 60px;
+    height: 60px;
+}
