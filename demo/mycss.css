@@ -22,3 +22,14 @@
     width: 60px;
     height: 60px;
 }
+
+#cz_vedio{
+   border: solid blue 2px;
+   margin: auto; 
+}
+#cz_vedio video{
+   border: dashed blue 2px;
+   margin: auto;
+   text-align: center; 
+   
+}
