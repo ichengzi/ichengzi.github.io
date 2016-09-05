@@ -1,5 +1,5 @@
-The repo is for chengzi blog.
+Here is the repo where chengzi post his blogs and his web html learn notes.
 
-The repo is for chengzi blog.
-
-The repo is for chengzi blog.
+    1. Blogs
+    
+    2. Html Css learn notes
