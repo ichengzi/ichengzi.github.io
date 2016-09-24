@@ -24,22 +24,32 @@
     //     document.write(response);
     //   });
 
-    $.ajax({
-        url:"http://hisyongcheng.bakingerp.com:8102/api/ADVTEMP2/GetWhereADVTEMP2",
-        type:"get",
-        async:true,
-        jsonp:"callback",
-        dataType:"jsonp",
-        data:{
-          whereClause:"sInHospitalId='3162'",
-          orderBy:"sInHospitalId"
-        },
+    // $.ajax({
+    //     url:"http://hisyongcheng.bakingerp.com:8102/api/ADVTEMP2/GetWhereADVTEMP2",
+    //     type:"get",
+    //     async:true,
+    //     jsonp:"callback",
+    //     dataType:"jsonp",
+    //     data:{
+    //       whereClause:"sInHospitalId='3162'",
+    //       orderBy:"sInHospitalId"
+    //     },
 
-        success:function(data){
-            //alert(data);
-            console.log(data[0].nFSeq);
-        }
-    });
+    //     success:function(data){
+    //         //alert(data);
+    //         console.log(data[0].nFSeq);
+    //     }
+    // });
+
+    $.ajax({
+      url:"http://iichengzi.cn:8080/1",
+      jsonp:"callback",
+      dataType:"jsonp",
+      data:{},
+      success:function(data){
+        alert(data);
+      }
+    })；
 
 
     // Using YQL and JSONP
