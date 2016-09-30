@@ -1,4 +1,5 @@
 ``` js
+//javascript
 var a = 1.0000002;
 var b = 0.0000002;
 console.log(a+b);
@@ -9,6 +10,7 @@ console.log(a-b);
 ```
 
 ``` js
+//javascript
 var a = 1.00000000000000002;
 var b = 0.00000000000000001;
 console.log(a+b);
@@ -19,6 +21,7 @@ console.log	(a-b);
 ```
 
 ``` csharp
+//c#
 var a = 1.00000000000000002m;
 var b = 0.00000000000000001m;
 Console.WriteLine(a+b);
@@ -29,6 +32,7 @@ Console.WriteLine(a-b);
 ```
 
 ``` csharp
+//c#
 var a = 1.00000000000000002;
 var b = 0.00000000000000001;
 Console.WriteLine(a+b);
