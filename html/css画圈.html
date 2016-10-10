@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .mark {
+            height: 1em;
+            width: 1em;
+            border-radius: 1em;
+            display: inline-block;
+            margin-left: 0.5em;
+        }
+        
+        .bbc {
+            background-color: #4a89dc;
+        }
+        
+        .gbc {
+            background-color: #8cc152;
+        }
+        
+        .rbc {
+            background-color: #da4453;
+        }
+
+        li::before{
+            content:"¶";
+        }
+        li::after{
+            content:"###";
+        }
+    </style>
+
+</head>
+
+<body>
+    <ul>
+        <li>三人同舟<span class="mark bbc"></span></li>
+        <li>懒人闲思录<span class="mark gbc"></span></li>
+        <li>巴菲特传<span class="mark rbc"></span></li>
+    </ul>
+</body>
+
+</html>
