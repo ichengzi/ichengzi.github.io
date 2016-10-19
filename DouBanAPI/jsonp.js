@@ -18,6 +18,7 @@ function crossDomain(url,params,fn){
     // 3. 插入script
     var scriptObj = document.createElement('script');
     scriptObj.src = url;
+    
     head.appendChild(scriptObj);
 }
 
