@@ -4,14 +4,11 @@ layout: default
 
 <div class="home">
 
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
+   <ul class="post-list">
     {% for post in site.posts %}
       <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
+        <p>
+          <span class="post-meta">{{ post.date | date: "%Y/%m/%d" }}</span>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
         </h2>
       </li>
@@ -19,9 +16,7 @@ layout: default
   </ul>
 </div>
 
-<hr>
 <div>
-  <h3>Demo</h3>
-  <a href="demo/index.html">DEMO</a>
+  <a href="demo/index.html"><b>DEMO</b></a>
   <img src="http://7xt7wx.com2.z0.glb.clouddn.com/cz.jpg" width="100" height="100" alt="cz-img" title="cz-img">
 </div>
