@@ -17,5 +17,6 @@ url: "http://4728.coding.me" # the base hostname & protocol for your site
 twitter_username: iichengzi
 github_username:  ichengzi
 
+timezone: Asia/Shanghai
 # Build settings
 markdown: kramdown
