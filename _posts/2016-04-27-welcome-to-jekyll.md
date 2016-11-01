@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "welcome to Jekyll"
 date:   2016-04-17 23:46:20 +0800
 categories: jekyll
 author: chengzi
