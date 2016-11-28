@@ -25,11 +25,15 @@
 
 #cz_vedio{
    border: solid blue 2px;
-   margin: auto; 
+   border-radius: 5px;
+   margin: 20px 200px;
 }
 #cz_vedio video{
    border: dashed blue 2px;
-   margin: auto;
-   text-align: center; 
-   
+}
+
+.youtube{
+    border: solid crimson 2px;
+    border-radius: 5px;
+    margin: 20px 200px;
 }

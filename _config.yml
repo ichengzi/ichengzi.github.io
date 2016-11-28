@@ -20,3 +20,5 @@ github_username:  ichengzi
 timezone: Asia/Shanghai
 # Build settings
 markdown: kramdown
+kramdown:
+  input: GFM
