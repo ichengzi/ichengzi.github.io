@@ -1,0 +1,10 @@
+@media print{
+    body{
+        font-size: 1em;
+        /*margin: 4cm;*/
+    }
+
+    @page{
+        margin: 2.5cm 1.5cm;
+    }
+}
