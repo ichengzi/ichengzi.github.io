@@ -1,18 +1,20 @@
---- layout: default ---
+---
+layout: default
+---
 
 <div class="home">
 
-  <ul class="post-list">
+   <ul class="post-list">
     {% for post in site.posts %}
-    <li>
-      <p>
-        <span class="post-meta">{{ post.date | date: "%Y/%m/%d" }}</span>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+      <li>
+        <p>
+          <span class="post-meta">{{ post.date | date: "%Y/%m/%d" }}</span>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
         </h2>
-    </li>
+      </li>
     {% endfor %}
-  </ul>
     <li>
-      <a href="some-test-page.html">一些测试页面链接整理</a>
+      <a href="some-test-page-index.html">一些测试页面链接整理</a>
     </li>
+  </ul>
 </div>
