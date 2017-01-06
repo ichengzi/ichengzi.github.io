@@ -1,3 +1,11 @@
+---
+layout: post
+title:  "double decimal"
+date:   2017-1-6 22:55:48+0800
+categories: csharp
+author: chengzi
+---
+
 #### 二进制表示小数，使用无限逼近的策略
 
 ``` js
