@@ -24,4 +24,4 @@ kramdown:
   input: GFM
 # highlighter: pygments
 
-theme: jekyll-theme-cayman
+# theme: jekyll-theme-cayman
