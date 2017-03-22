@@ -2,7 +2,7 @@
 layout: post
 title:  "class constructor"
 date:  2017-3-13 20:06:59+0800
-categories: c#
+categories: csharp
 author: chengzi
 ---
 
