@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "start to use hexo"
-date:   2017-2-23 6:55:48+0800
+date:   2014-2-23 6:55:48+0800
 categories: hexo
 author: chengzi
 ---
