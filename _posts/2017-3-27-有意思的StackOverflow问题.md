@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "有意思的StackOverflow"
+title:  "有意思的StackOverflow问题"
 date:  2017-3-27 18:37:16+0800
 categories: sf
 author: chengzi
@@ -9,7 +9,7 @@ author: chengzi
 * 目录
 {:toc}
 
-## 1. Why does ?: cause a conversion error while if-else does not? 
+### 1. Why does ?: cause a conversion error while if-else does not? 
 
 [Question Link](http://stackoverflow.com/questions/42690073/why-does-cause-a-conversion-error-while-if-else-does-not)
 
