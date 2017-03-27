@@ -1,3 +1,7 @@
+
+* 目录
+{:toc}
+
 ## 1. Array
 
 ``` csharp
@@ -29,3 +33,13 @@ foreach(int i in numbers)
    // 数组的 foreach进行了特殊的处理
 }
 ```
+
+## 2. Pointer
+
+int*[] p  --- p is a single-dimensional array of  pointers to integers.
+
+int* , 指向int类型的`指针类型`。
+
+Pointer types do not inherit from `object` and no conversions exist between pointer types and object. Also, `boxing and unboxing` do not support pointers.
+
+指针类型没有从object继承，不能和object类型进行转换。因此，拆箱和装箱不支持指针类型。
