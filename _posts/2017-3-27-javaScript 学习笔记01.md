@@ -106,7 +106,7 @@ the paragraph element can be referenced by any of the following:
  * `document.body.children[0]`
 
 
- ##  js-Class
+##  js-Class
  
 [MDN js class](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
 
@@ -115,14 +115,14 @@ the paragraph element can be referenced by any of the following:
  ecma2015中引入的class是基于js的**原型链继承方式**，并不是为js引入了一种新的**面向对象的继承模型**。新的class关键字只是提供了一种更简单清晰的**创建对象和处理继承的语法**。
 
 --------------------------
- ## html element --- id vs name
+## html element --- id vs name
 
  1. id 适用于所有元素，name只适用一部分如form, img 等
  2. 当一个form提交数据时，其必须设置name属性
  3. name - document.getElementsByName();    id - document.getElementById()
 
 --------------------------
- ## js内置的对象
+## js内置的对象
 
 JS的对象可以使用‘.’操作符动态的扩展其属性，可以使用’delete’操作符或将属性值设置为’undefined’来删除属性。
 
