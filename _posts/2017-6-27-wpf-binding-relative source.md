@@ -39,7 +39,7 @@ Mode  | description
 ------- |--------
 **Self** |自身的其他属性，属性间的相互影响
 **FindAncestor** | 界面布局上的相关性
-**TemplatedParent** | Refers to the element to which the template | is applied. This is similar to setting a TemplateBindingExtension and is only applicable if the Binding is within a template.
+**TemplatedParent** | Refers to the element to which the template is applied. This is similar to setting a TemplateBindingExtension and is only applicable if the Binding is within a template.
 **PreviousData** | Allows you to bind the previous data item (not that control that contains the data item) in the list of data items being displayed.
 
 // From StackOverFlow
