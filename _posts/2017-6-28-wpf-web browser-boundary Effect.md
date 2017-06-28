@@ -33,10 +33,10 @@ Handling the event on the window didn’t remove the behaviour in the applicatio
 
 > 上边方法对于原生的wpf控件是可以的，但是 webBrowser 不行。对于webbrowser，何解？
 
-You could turn of this behavior for the whole system. 
+You could turn off this behavior for the whole system. 
 
 Open registry ( `run regedit command` )and set `HKEY_CURRENT_USER\Software\Microsoft\Wisp\Touch` `Bouncing` to `0`;
-if `HKEY_CURRENT_USER\Software\Microsoft\Wisp\Touch` not exist `Bouncing` item, add it( **DWORD type Not QWORD or String**) and set it value to `0`;
+if `HKEY_CURRENT_USER\Software\Microsoft\Wisp\Touch` not exist `Bouncing` item, add it( **DWORD type, Not QWORD or String**) and set it value to `0`;
 
 ------
 
