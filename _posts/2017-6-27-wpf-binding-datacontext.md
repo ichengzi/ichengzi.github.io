@@ -1,4 +1,5 @@
-### Binding 
+### Binding Context
+
 DataContext属性被定义在FrameworkElement类里，这个类是WPF控件的基类，这意味着所有WPF控件都具备这个属性，**当一个Binding只知道自己的Path而不知道自己的Source**时，它会沿着UI元素树一路向输的根部找过去，**每路过一个节点，就看看这个节点的DataContext有没有指定的Path**，如果有，就把这个对象作为自己的Source。
 
 ```csharp
