@@ -9,25 +9,19 @@ layout: default
       <li style="margin-bottom:0px">
         <p style="font-size: 1.1em;margin-bottom:10px;">
           <span class="post-meta">
-              <!--0x{{(site.posts.size - forloop.index+1).to_s(16).rjust(2,'0')}}-->
               0x{{forloop.rindex}}
           </span>
           <span class="post-meta">
               {{ post.date | date: "%Y/%m/%d" }} - 
             </span>
-          <!--{{ post.date | date: "%Y/%m/%d" }}-->
-          <!--<a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>-->
           <a  href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
         </p>
       </li>
     {% endfor %}
     <li>
       <span class="post-meta">
-              0x00
+              [archive]
           </span>
-          <span class="post-meta">
-              2016-12-12
-            </span>
       <a href="some-test-page-index.html">html-js-learn-test-page-archive</a>
     </li>
   </ul>
