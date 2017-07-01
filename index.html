@@ -10,7 +10,7 @@ layout: default
         <p style="font-size: 1.1em;margin-bottom:10px;">
           <span class="post-meta">
               <!--0x{{(site.posts.size - forloop.index+1).to_s(16).rjust(2,'0')}}-->
-              0x{{forloop.rindex0.to_s(16).rjust(2,'0')}}
+              0x{{forloop.rindex}}
           </span>
           <span class="post-meta">
               {{ post.date | date: "%Y/%m/%d" }} - 
@@ -22,7 +22,13 @@ layout: default
       </li>
     {% endfor %}
     <li>
-      <a href="some-test-page-index.html">一些测试页面链接整理</a>
+      <span class="post-meta">
+              0x00
+          </span>
+          <span class="post-meta">
+              2016-12-12
+            </span>
+      <a href="some-test-page-index.html">html-js-learn-test-page-archive</a>
     </li>
   </ul>
 </div>
