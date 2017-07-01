@@ -3,16 +3,16 @@ layout: default
 ---
 
 <div class="home">
-  <h3>Total : {{site.posts | size}} blogs</h3>
+  <h2>Total : {{site.posts | size}} blogs</h2>
    <ul class="post-list">
     {% for post in site.posts %}
-      <li>
-        <p style="font-size: 1.1em">
+      <li style="margin-bottom:0px">
+        <p style="font-size: 1.1em;margin-bottom:10px;">
           <span class="post-meta">
-              0x{{forloop.index}}
+              0x{{(site.posts.size - orloop.index+1).to_s(16).rjust(2,'0')}}
           </span>
           <span class="post-meta">
-              {{ post.date | date: "%Y/%m/%d" }}
+              {{ post.date | date: "%Y/%m/%d" }} - 
             </span>
           <!--{{ post.date | date: "%Y/%m/%d" }}-->
           <!--<a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>-->
