@@ -25,3 +25,5 @@ kramdown:
 # highlighter: pygments
 
 # theme: jekyll-theme-cayman
+
+exclude: bootstrap_course,html-js-learn,node-learn
