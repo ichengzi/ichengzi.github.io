@@ -57,3 +57,24 @@ table-striped(条纹,奇偶行背景不一样)
 table-hover
 
 table-bordered
+
+
+### emmet
+
+body 内， `.nav`出来的是 div
+
+`<p>`内，`.label`出来的是span
+
+### other
+
+breadcrumb(面包屑导航： Home/Posts/Current)
+
+badge(徽章)
+
+label-success， label-danger
+
+alert-danget, alert-info
+
+list-group, list-group-item
+
+pagination, pager
