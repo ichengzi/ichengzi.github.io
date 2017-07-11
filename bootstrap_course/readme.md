@@ -1,4 +1,4 @@
-### button
+### button - 2017-7-3
 
 btn btn-defalut btn-lg
 
@@ -13,7 +13,7 @@ btn btn-defalut btn-lg
 // disabled = "disabled"(禁用按钮)
 
 
-### navigation
+### navigation - 2017-7-4
 
 col - 默认带有15px的margin
 
@@ -24,3 +24,57 @@ row中嵌套col，刚好是可以对齐
 nav-tabs, nav-justified // 水平导航
 
 nav-pills, nav-stacked //堆叠，侧栏导航
+
+### navbar
+
+navbar-default
+
+nvabar-nav
+
+navbar-left
+
+navbar-form
+
+### btn-group
+
+btn-group-toolbar
+
+btn-group-vertical
+
+btn-group-lg
+
+### panel
+
+panel-default, panel-primary
+
+div.samll.text-muted
+// text-muted 是 bootstrap中的帮助类，muted是静音的意思，即修饰内容不太显眼
+
+### table
+
+table-striped(条纹,奇偶行背景不一样)
+
+table-hover
+
+table-bordered
+
+
+### emmet
+
+body 内， `.nav`出来的是 div
+
+`<p>`内，`.label`出来的是span
+
+### other
+
+breadcrumb(面包屑导航： Home/Posts/Current)
+
+badge(徽章)
+
+label-success， label-danger
+
+alert-danget, alert-info
+
+list-group, list-group-item
+
+pagination, pager
