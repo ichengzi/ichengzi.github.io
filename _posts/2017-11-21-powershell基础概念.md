@@ -45,3 +45,12 @@ In addition, cmdlet developers do not have to design sorting features for their 
 
 ## Object Orientation - 面向对象
 Although you interact with Windows PowerShell by typing commands in text, **Windows PowerShell is based on objects, not text**. The output of a command is an object. You can send the output object to another command as its input. As a result, Windows PowerShell provides a familiar interface to people experienced with other shells, while introducing a new and powerful command-line paradigm. **It extends the concept of sending data between commands by enabling you to send objects, rather than text**.
+
+
+
+## 基础cmdlet
+<https://docs.microsoft.com/zh-cn/powershell/module/Microsoft.PowerShell.Management/Get-Service?view=powershell-5.1>
+
+`Get-Service | Where-Object {$_.Status -eq "Running"}`， 过滤出只在运行的 service
+
+`Get-Service -ComputerName "Server02"` Because the ComputerName parameter of Get-Service **does not use Windows PowerShell remoting**, you can use this parameter even if the computer is not configured for remoting in Windows PowerShell. 这个命令不需要远程权限，所以可以获取内网机器上的服务。
