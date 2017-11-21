@@ -6,7 +6,7 @@ Windows PowerShell is a combined interactive and scripting environment that give
 ```
 两种模块：
 1. cmdlet
-2. providers
+2. module,(可以包含多个 cmdlet，类似 nameSpace)
 ```
 ## PowerShell 版本
 
