@@ -5,7 +5,7 @@ Here is the repo where chengzi post his blogs and his web html learn notes.
     
 - [ ] 不勾选
 - [x] 勾选
-- [ ]  IsEnabled
+- [x]  IsEnabled
 
 :sob: :see_no_evil: :zzz:
 
