@@ -12,6 +12,6 @@ Here is the repo where chengzi post his blogs and his web html learn notes.
 目录                                                | 说明
 --------------------------------------|-------------------------
 regular-expression-ICD10-data      | 正则表达式处理icd10 pdf文件数据
-cz-doc                                             | 之前笔记整理归档
-html-js-learn                                   | html js 知识学习
+cz-doc                             | 之前笔记整理归档
+html-js-learn                      | html js 知识学习
 
