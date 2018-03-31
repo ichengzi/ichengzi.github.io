@@ -6,7 +6,7 @@
 `.\dotNetFx40_Full_x86_x64.exe /?` 查看这个安装程序对应的参数
 `dotNetFx40_Full_x86_x64.exe /q` ， 静默安装 .net 4
 
-```
+```powershell
 $exists = test-path "HKLM:\SOFTWARE\Microsoft\NET Framework Setup\";
 $version = gci 'HKLM:\SOFTWARE\Microsoft\NET Framework Setup\NDP'| sort pschildname -desc | select -fi 1 -exp pschildname;
 Write-Progress "正在安装.NET Framework 4" "请稍候……"
