@@ -1,3 +1,4 @@
+## GAE Credentials
 Google uses **credentials** to identify your application for **quota and billing**. Your credentials are also used to authorize access to **GCP APIs, resources, and features**.
 
 Google 使用证书来区分应用的配额和费用。证书用于在访问 google云端api、资源、功能时的授权。
@@ -13,7 +14,7 @@ Google 使用证书来区分应用的配额和费用。证书用于在访问 goo
 
     首先检查环境变量，然后检查应用绑定的服务账户，都失败则返回错误。
 
-
+---------
 
 ## Google的两套API系统
 com.google`.cloud.datastore`.Datastore;
@@ -27,9 +28,11 @@ gae -> cron.yaml 中定义url不能使用中文，中文需要url编码后才行
 `gcloud app deploy cron.yaml` 发布cron任务
 
 
+---------
+
 ## datastore kind 不能使用中文
 
-kind,不要使用中文， index.yaml 文件中需要指定kind，winddows gcloud工具使用python写的，中文处理有问题
+kind,不要使用中文， index.yaml 文件中需要指定kind，windows gcloud工具使用python写的，中文处理有问题
 
 The index.yaml is located in the `<project-directory>/WEB-INF/` folder. 
 
@@ -47,6 +50,7 @@ For more complex queries, an application must define composite, or manual, index
 * Queries with multiple sort orders
 * Queries with one or more filters and one or more sort orders
 
+---------
 
 ## nslookup 命令
 
