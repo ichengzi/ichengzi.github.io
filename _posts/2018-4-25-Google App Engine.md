@@ -50,6 +50,11 @@ For more complex queries, an application must define composite, or manual, index
 * Queries with multiple sort orders
 * Queries with one or more filters and one or more sort orders
 
+### java
+
+JDO - java data objects
+JPA - java persistence api
+
 ---------
 
 ## nslookup 命令
