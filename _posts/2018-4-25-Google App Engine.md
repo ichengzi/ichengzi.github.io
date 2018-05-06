@@ -55,6 +55,8 @@ For more complex queries, an application must define composite, or manual, index
 JDO - java data objects
 JPA - java persistence api
 
+`mvn appengine:deploy` java部署命令
+
 ---------
 
 ## nslookup 命令

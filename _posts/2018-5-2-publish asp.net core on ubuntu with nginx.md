@@ -34,6 +34,39 @@ sudo nginx -t  # test
 sudo nginx -s reload
 ```
 
-## dotnet run 
+### dotnet run linux 缺失文件
 
 记得匹配好端口
+
+> Microsoft.ApplicationInsights.AspNetCore.dll is missing
+
+``` bash
+ An assembly specified in the application dependencies manifest (MyApp.deps.json) was not found:
+    package: 'Microsoft.AspNetCore.Antiforgery', version: '2.0.1'
+    path: 'lib/netstandard2.0/Microsoft.AspNetCore.Antiforgery.dll'
+
+  This assembly was expected to be in the local runtime store as the application was published using the following target manifest files:
+    aspnetcore-store-2.0.3.xml
+```
+
+I have arch linux (not officially supported).
+
+``` bash
+dotnet new empty
+dotnet publish -o ./published
+dotnet published/<ProjectName>.dll
+and that error is presented
+```
+
+but
+``` bash
+//I added runtime identifier for linux
+dotnet publish -o ./published -r linux-x64
+dotnet published/<ProjectName>.dll
+this works.
+```
+So perhaps try to specify **runtime identifier  -r linux-x64** when you publish your application.
+
+https://github.com/dotnet/coreclr/issues/13542
+
+https://github.com/aspnet/aspnet-docker/issues/286
