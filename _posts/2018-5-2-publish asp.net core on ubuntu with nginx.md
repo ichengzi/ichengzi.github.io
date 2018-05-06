@@ -36,8 +36,6 @@ sudo nginx -s reload
 
 ### dotnet run linux 缺失文件
 
-记得匹配好端口
-
 > Microsoft.ApplicationInsights.AspNetCore.dll is missing
 
 ``` bash
@@ -69,4 +67,10 @@ So perhaps try to specify **runtime identifier  -r linux-x64** when you publish 
 
 https://github.com/dotnet/coreclr/issues/13542
 
-https://github.com/aspnet/aspnet-docker/issues/286
+--> https://github.com/aspnet/aspnet-docker/issues/286
+
+Workaround also works for Ubuntu. Seems like you have to specify your target runtime environment:
+
+`dotnet publish -c release -o publish -r linux-x64`
+
+This is not the case when using the SDK
