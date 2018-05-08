@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-Hi , I'm chengzi. yyyy
+Hi , I'm chengzi. 
 
 My email is <a href="mailto:chengzi12130@gmail.com">chengzi12130@gmail.com</a>
 
