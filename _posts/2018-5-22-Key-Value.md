@@ -3,3 +3,16 @@ The `System.Collections.Specialized` namespace contains `specialized and strongl
 特殊功能的集合
 
 * NameValueCollection
+* `System.Collections.Specialized.CollectionsUtil.CreateCaseInsensitiveHashTable()`, 创建字母大小写不敏感hashtable
+
+
+
+
+------------
+
+As entries are added to a hashtable, the hashtable's
+actual load factor increases, and when the actual load factor reaches the
+maximum load factor value, the number of buckets in the hashtable is
+automatically increased by approximately a factor of two (to be precise(精确的说), the
+number of hashtable buckets is increased to the smallest prime number（素数） that
+is larger than twice the current number of hashtable buckets).
