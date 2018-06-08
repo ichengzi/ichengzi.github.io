@@ -54,3 +54,9 @@ Although you interact with Windows PowerShell by typing commands in text, **Wind
 `Get-Service | Where-Object {$_.Status -eq "Running"}`， 过滤出只在运行的 service
 
 `Get-Service -ComputerName "Server02"` Because the ComputerName parameter of Get-Service **does not use Windows PowerShell remoting**, you can use this parameter even if the computer is not configured for remoting in Windows PowerShell. 这个命令不需要远程权限，所以可以获取内网机器上的服务。
+
+## 显示文件信息格式化
+
+`Get-ChildItem -force | Select-Object Name, @{Name="LastWriteTime"; Expression={$_.LastWriteTime.ToString("MM/dd/yyyy hh:mm:ss.fff")}}`
+
+时间显示到毫秒
