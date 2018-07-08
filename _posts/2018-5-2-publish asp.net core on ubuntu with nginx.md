@@ -74,3 +74,10 @@ Workaround also works for Ubuntu. Seems like you have to specify your target run
 `dotnet publish -c release -o publish -r linux-x64`
 
 This is not the case when using the SDK
+
+
+### dotnet core ubuntu
+
+`dotnet publish -c release -o publish -r linux-x64`
+
+`nohup dotnet run -c release &`
