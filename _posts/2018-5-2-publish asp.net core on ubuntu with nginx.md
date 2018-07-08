@@ -81,3 +81,23 @@ This is not the case when using the SDK
 `dotnet publish -c release -o publish -r linux-x64`
 
 `nohup dotnet run -c release &`
+
+`ps -e --sort=cmd`, 按进程名排序（默认是按 进程id排序）
+
+`sudo service supervisor restart`, 重启监控进程
+``` shell
+[program:WebApplication1]
+command=/usr/bin/dotnet /home/robin/publish/WebApplication1.dll
+directory=/home/robin/publish
+autostart=true
+autorestart=true
+stderr_logfile=/var/log/NetCoreBBS.err.log
+stdout_logfile=/var/log/NetCoreBBS.out.log
+environment=ASPNETCORE__ENVIRONMENT=Production
+user=root
+stopsignal=INT
+```
+
+`sudo tail -f /var/log/supervisor/supervisord.log` view supervisor log
+
+`tail -f /var/log/hellomvc.out.log`, view asp net core app log
