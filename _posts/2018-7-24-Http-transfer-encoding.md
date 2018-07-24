@@ -1,3 +1,6 @@
+### https://www.tuicool.com/articles/6fIzEbn
+
+``` http
 request:
 Accept-Encoding: gzip
 Connection: keep-alive
@@ -7,9 +10,7 @@ Content-Encoding: gzip
 Connection: keep-alive
 Transfer-Encoding: chunked
 Set-Cookie: name=abc;path=/;domain=baidu.com
-
-
-https://www.tuicool.com/articles/6fIzEbn
+```
 
 ## Persistent Connection(持久连接)
 
@@ -32,3 +33,8 @@ https://www.tuicool.com/articles/6fIzEbn
 分块编码传输既然只有一个可选的参数，我们就只需要指定它为 Transfer-Encoding:chunked ，后续我们就可以将内容实体包装一个个块进行传输。
 
 ![http-client-server-chunked](/images/http-client-server-chunked.webp)
+
+## trailer 
+我们使用 chunked 进行分块编码传输的时候，传输结束之后，还有机会在分块报文的末尾，再追加一段数据，此数据称为拖挂（Trailer）。
+
+一般我们会使用拖挂来传递一些在响应报文开始的时候，无法确定的某些值，例如：Content-MD5 首部就是一个常见的在拖挂中追加发送的首部。和长度一样，对于需要分块编码传输的内容实体，在开始响应的时候，我们也很难算出它的 MD5 值。
