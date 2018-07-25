@@ -6,7 +6,7 @@ permalink: /about/
 
 Hi , I'm chengzi. 
 
-My email is <a href="mailto:chengzi12130@gmail.com">chengzi12130@gmail.com</a>
+My email is <a href="mailto:chengzi12130+ichengzi.github.io@gmail.com">chengzi12130@gmail.com</a>
 
 Here is some of my links:
 
