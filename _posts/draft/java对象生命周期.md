@@ -1,3 +1,4 @@
+``` java
 package com.ccb.framework.enums;
  
 import java.util.Collections;
@@ -54,3 +55,4 @@ public class CachingEnumResolver {
         System.out.println(CachingEnumResolver.getInstance().getCache());
     }
 }
+```

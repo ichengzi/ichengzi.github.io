@@ -1,0 +1,119 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 268435456 bytes for Failed to commit area from 0x00000000c0000000 to 0x00000000d0000000 of length 268435456.
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   In 32 bit mode, the process size limit was hit
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Use 64 bit Java on a 64 bit OS
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (os_windows.cpp:3331), pid=6240, tid=0x0000000000004160
+#
+# JRE version:  (8.0_144-b01) (build )
+# Java VM: OpenJDK 64-Bit Server VM (25.144-b01 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00000000026ba800):  JavaThread "Unknown thread" [_thread_in_vm, id=16736, stack(0x00000000029e0000,0x0000000002ae0000)]
+
+Stack: [0x00000000029e0000,0x0000000002ae0000]
+[error occurred during error reporting (printing stack bounds), id 0xc0000005]
+
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x00000000026ba800 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=16736, stack(0x00000000029e0000,0x0000000002ae0000)]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x0000000001dbf430] Heap_lock - owner thread: 0x00000000026ba800
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x000000013f540000 - 0x000000013f583000 	C:\Program Files\RedHat\java-1.8.0-openjdk-1.8.0.144-1\bin\java.exe
+0x0000000077bb0000 - 0x0000000077d4f000 	C:\Windows\SYSTEM32\ntdll.dll
+0x0000000077990000 - 0x0000000077aaf000 	C:\Windows\system32\kernel32.dll
+0x000007fefda80000 - 0x000007fefdaea000 	C:\Windows\system32\KERNELBASE.dll
+0x000007feff810000 - 0x000007feff8eb000 	C:\Windows\system32\ADVAPI32.dll
+0x000007fefeca0000 - 0x000007fefed3f000 	C:\Windows\system32\msvcrt.dll
+0x000007feffc80000 - 0x000007feffc9f000 	C:\Windows\SYSTEM32\sechost.dll
+0x000007feffb50000 - 0x000007feffc7d000 	C:\Windows\system32\RPCRT4.dll
+0x0000000077ab0000 - 0x0000000077baa000 	C:\Windows\system32\USER32.dll
+0x000007feffe30000 - 0x000007feffe97000 	C:\Windows\system32\GDI32.dll
+0x000007feffca0000 - 0x000007feffcae000 	C:\Windows\system32\LPK.dll
+0x000007feff210000 - 0x000007feff2db000 	C:\Windows\system32\USP10.dll
+0x000007fefc200000 - 0x000007fefc3f4000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.17514_none_fa396087175ac9ac\COMCTL32.dll
+0x000007feff2e0000 - 0x000007feff351000 	C:\Windows\system32\SHLWAPI.dll
+0x000007fefa530000 - 0x000007fefa54a000 	C:\Program Files\RedHat\java-1.8.0-openjdk-1.8.0.144-1\bin\ojdkbuild_zlib.dll
+0x000007feffdb0000 - 0x000007feffdde000 	C:\Windows\system32\IMM32.DLL
+0x000007feff0f0000 - 0x000007feff1f9000 	C:\Windows\system32\MSCTF.dll
+0x0000000063940000 - 0x0000000063a12000 	C:\Program Files\RedHat\java-1.8.0-openjdk-1.8.0.144-1\jre\bin\msvcr100.dll
+0x00000000075c0000 - 0x0000000007e7d000 	C:\Program Files\RedHat\java-1.8.0-openjdk-1.8.0.144-1\jre\bin\server\jvm.dll
+0x000007fef8cc0000 - 0x000007fef8cc9000 	C:\Windows\system32\WSOCK32.dll
+0x000007feffde0000 - 0x000007feffe2d000 	C:\Windows\system32\WS2_32.dll
+0x000007feff200000 - 0x000007feff208000 	C:\Windows\system32\NSI.dll
+0x000007fefb370000 - 0x000007fefb3ab000 	C:\Windows\system32\WINMM.dll
+0x000007fefca40000 - 0x000007fefca4c000 	C:\Windows\system32\VERSION.dll
+0x0000000077d60000 - 0x0000000077d67000 	C:\Windows\system32\PSAPI.DLL
+0x000007fef2830000 - 0x000007fef283f000 	C:\Program Files\RedHat\java-1.8.0-openjdk-1.8.0.144-1\jre\bin\verify.dll
+0x000007feecbb0000 - 0x000007feecbd9000 	C:\Program Files\RedHat\java-1.8.0-openjdk-1.8.0.144-1\jre\bin\java.dll
+0x000007fef2170000 - 0x000007fef217b000 	C:\Program Files\RedHat\java-1.8.0-openjdk-1.8.0.144-1\jre\bin\zip.dll
+
+VM Arguments:
+jvm_args: -Declipse.application=org.eclipse.jdt.ls.core.id1 -Dosgi.bundles.defaultStartLevel=4 -Declipse.product=org.eclipse.jdt.ls.core.product -Xverify:none -Xmx1G -XX:+UseG1GC -XX:+UseStringDeduplication 
+java_command: D:\Users\chengleiwang\.vscode\extensions\redhat.java-0.28.0\server\plugins\org.eclipse.equinox.launcher_1.5.100.v20180611-1436.jar -configuration D:\Users\chengleiwang\.vscode\extensions\redhat.java-0.28.0\server\config_win -data D:\Users\chengleiwang\AppData\Roaming\Code\User\workspaceStorage\1cf962026dc0e203695ab108715199c5\redhat.java\jdt_ws
+java_class_path (initial): D:\Users\chengleiwang\.vscode\extensions\redhat.java-0.28.0\server\plugins\org.eclipse.equinox.launcher_1.5.100.v20180611-1436.jar
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk1.7.0_60
+CLASSPATH=.C:\Program Files\Java\jdk1.7.0_60\lib;C:\Program Files\Java\jdk1.7.0_60\lib\tools.jar
+PATH=C:\Python27\;C:\Python27\Scripts;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\ManagementStudio\;C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\110\DTS\Binn\;C:\Program Files\Java\jdk1.7.0_60\bin;C:\Program Files\Java\jdk1.7.0_60\jre\bin;C:\JAVA\apache-maven-3.3.9\bin;C:\Program Files\TortoiseGit\bin;C:\ProgramData\chocolatey\bin;C:\Program Files\Microsoft\Web Platform Installer\;C:\Program Files (x86)\Microsoft SDKs\TypeScript\1.0\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;c:\Program Files\Microsoft SQL Server\110\DTS\Binn\;C:\Program Files\nodejs\;C:\Program Files\OpenSSH\bin;C:\Program Files (x86)\PuTTY\;D:\Soft\Sublime;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\RedHat\java-1.8.0-openjdk-1.8.0.144-1\bin;c:\Program Files (x86)\Microsoft ASP.NET\ASP.NET Web Pages\v1.0\;c:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;c:\Program Files\Microsoft SQL Server\100\Tools\Binn\;c:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\dotnet\;C:\Program Files\Git\cmd;C:\Program Files (x86)\Microsoft VS Code\bin;D:\Users\chengleiwang\AppData\Local\Programs\Python\Python37-32\Scripts\;D:\Users\chengleiwang\AppData\Local\Programs\Python\Python37-32\;C:\Program Files (x86)\Microsoft VS Code\bin;C:\Program Files\Bandizip\;D:\Users\chengleiwang\AppData\Roaming\npm;D:\Soft\Sublime;D:\Users\chengleiwang\AppData\Local\GitHubDesktop\bin;C:\Program Files (x86)\Google\Cloud SDK\google-cloud-sdk\bin;D:\Users\chengleiwang\AppData\Local\Programs\Fiddler
+USERNAME=chengleiwang
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 94 Stepping 3, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 7 , 64 bit Build 7601 (6.1.7601.24168)
+
+CPU:total 4 (initial active 4) (4 cores per cpu, 1 threads per core) family 6 model 94 stepping 3, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, rtm, 3dnowpref, lzcnt, tsc, tscinvbit, bmi1, bmi2, adx
+
+Memory: 4k page, physical 16664968k(4678364k free), swap 20857396k(579256k free)
+
+vm_info: OpenJDK 64-Bit Server VM (25.144-b01) for windows-amd64 JRE (1.8.0_144-1-redhat-b01), built on Sep 13 2017 13:23:42 by "build" with MS VC++ 10.0 (VS2010)
+
+time: Thu Aug 02 18:36:44 2018
+elapsed time: 0 seconds (0d 0h 0m 0s)
+
