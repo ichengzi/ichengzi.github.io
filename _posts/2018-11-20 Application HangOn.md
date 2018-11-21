@@ -2,6 +2,10 @@
 
 # Preventing Hangs in Windows Applications
 
+> IsHungAppWindow()
+> DisableProcessWindowsGhosting ()
+
+
 A programmer might recognize **many legitimate reasons** for an application not to instantly respond to user input. 
 
 The application might be busy recalculating some data, or simply waiting for its disk I/O to complete. 
