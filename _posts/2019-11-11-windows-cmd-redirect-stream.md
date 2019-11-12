@@ -11,7 +11,7 @@ PS D:\>  cat aa.txt >>log.txt 2>>err.txt // log.txt值不动， err.txt附加错
 
 > **stdin、stdout和stderr流都有对应的编号，分别是0到2。stderr对应的流编号是2，可以用2> errors.log重定向，shell看到这个就知道要将编号为2的流重定向到文件errors.log中。**
 
-![stdout errout stream](images/stdout-err-stream.png)
+![stdout errout stream](/images/stdout-err-stream.png)
 
 参考链接： https://www.cnblogs.com/xixiuling/p/10208583.html
 
