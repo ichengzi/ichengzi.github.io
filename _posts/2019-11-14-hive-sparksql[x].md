@@ -14,3 +14,8 @@ date_format can be used to implement other UDFs, e.g.:
 dayname(date) is date_format(date, 'EEEE')
 dayofyear(date) is date_format(date, 'D')
 
+
+
+### c#循环移除列表元素
+
+https://stackoverflow.com/questions/1582285/how-to-remove-elements-from-a-generic-list-while-iterating-over-it
