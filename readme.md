@@ -1,4 +1,4 @@
-Here is the repo where chengzi post his blogs and his web html learn notes.
+The repo where chengzi post blogs and learn notes.
     
 
  [index](index.html)
