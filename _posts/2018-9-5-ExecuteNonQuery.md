@@ -26,3 +26,19 @@ Although the ExecuteNonQuery returns no rows, **any output parameters or return 
 **For UPDATE, INSERT, and DELETE statements**, the return value is the number of rows affected by the command. When a trigger exists on a table being inserted or updated, the return value includes the number of rows affected by both the insert or update operation **and the number of rows affected by the trigger or triggers**. **For all other types of statements, the return value is -1**. 
 
 **If a rollback occurs, the return value is also -1**.
+
+### 2019-11-12-mysql-or-vs-union-all
+https://stackoverflow.com/questions/13750475/sql-performance-union-vs-or
+
+https://bertwagner.com/2018/02/20/or-vs-union-all-is-one-better-for-performance/
+
+https://dev.mysql.com/doc/refman/8.0/en/union.html
+https://dev.mysql.com/doc/refman/5.5/en/show-profile.html
+http://www.mysqltutorial.org/sql-union-mysql.aspx
+https://www.iteye.com/blog/xianglp-869892
+
+
+### mysql 字段类型转换
+
+varchar to datetime转换
+
