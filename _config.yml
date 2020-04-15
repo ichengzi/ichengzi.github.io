@@ -27,3 +27,4 @@ kramdown:
 # theme: jekyll-theme-cayman
 
 exclude: bootstrap_course,html-js-learn,node-learn
+theme: jekyll-theme-slate
