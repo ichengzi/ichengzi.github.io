@@ -1,0 +1,22 @@
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="http://unpkg.com/vue/dist/vue.js"></script>
+    <script src="http://unpkg.com/element-ui@2.12.0/lib/index.js"></script>
+    <link rel="stylesheet" href="http://unpkg.com/element-ui@2.12.0/lib/theme-chalk/index.css" >
+    <script src="button-counter.js" ></script>
+</head>
+
+<body>
+    <div id="app">
+        <!-- <el-transfer v-model="value" :data="data"></el-transfer> -->
+        <button-counter v-for="item in data" :title="item.label"></button-counter>
+    </div>
+    <script src="./index.js"></script>
+</body>
+
+</html>
