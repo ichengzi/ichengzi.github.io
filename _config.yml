@@ -1,19 +1,9 @@
 # Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
 title: chengzi's blog
 email: chengzi12130@gmail.com
-description: > # this means to ignore newlines until "baseurl:"
-  Talk is cheap. 
-  </br>
-  Show me the code.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://4728.coding.me" # the base hostname & protocol for your site
+description: hello world
 twitter_username: iichengzi
 github_username:  ichengzi
 
@@ -27,3 +17,6 @@ kramdown:
 # theme: jekyll-theme-cayman
 
 exclude: bootstrap_course,html-js-learn,node-learn
+
+paginate: 15
+paginate_path: "page:num"
