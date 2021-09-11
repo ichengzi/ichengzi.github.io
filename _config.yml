@@ -16,7 +16,7 @@ kramdown:
 
 # theme: jekyll-theme-cayman
 
-exclude: bootstrap_course,html-js-learn,node-learn
+# exclude: bootstrap_course,html-js-learn,node-learn
 
 paginate: 15
 paginate_path: "page:num"
