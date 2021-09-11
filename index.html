@@ -11,7 +11,12 @@ layout: default
         <span class="post-meta">
           <!-- jekyll-liquid， 对ruby的封装，只能使用封装完的， github pages中不让运行ruby代码-->
           <!-- liquid语法， https://learn.cloudcannon.com/jekyll-liquid/ -->
-          0x{{forloop.rindex}}
+          
+          {% if forloop.rindex <10 %}
+            0x0{{forloop.rindex}}
+          {% else %}
+            0x{{forloop.rindex}}
+          {% endif %}
         </span>
         <span class="post-meta">
           {{ post.date | date: "%Y/%m/%d" }} -
@@ -28,10 +33,6 @@ layout: default
     </li>
   </ul>
   {% if paginator.total_pages > 1 %}
-  {% if paginator.previous_page %}
-  <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" 上一页</a>
-    {% endif %}
-
 
     {% for page in (1..paginator.total_pages) %}
     {% if page == paginator.page %}
@@ -43,10 +44,6 @@ layout: default
       }}</a>
     {% endif %}
     {% endfor %}
-
-    {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">下一页</a>
-    {% endif %}
 
     {% endif %}
 
