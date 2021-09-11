@@ -20,3 +20,4 @@ exclude: bootstrap_course,html-js-learn,node-learn
 
 paginate: 15
 paginate_path: "page:num"
+theme: jekyll-theme-slate
