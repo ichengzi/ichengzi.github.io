@@ -30,7 +30,7 @@ layout: default
       <span class="post-meta">
         [archive]
       </span>
-      <a href="some-test-page-index.html">html-js-learn-test-page-archive</a>
+      <a href="/some-test-page-index.html">html-js-learn-test-page-archive</a>
     </li>
   </ul>
   <div class="pagination" style="font-size: 20pt;">
@@ -38,9 +38,9 @@ layout: default
       
       {% if paginator.previous_page %}
         {% if paginator.previous_page == 1 %}
-          <a href="/">pre</a>
+          <a href="/" style="border-bottom: dotted orange;">pre</a>
         {% else %}
-          <a href="{{ paginator.previous_page_path }}">pre</a>
+          <a href="{{ paginator.previous_page_path }}" style="border-bottom: dotted orange;">pre</a>
         {% endif %}
       {% endif %}
 
@@ -55,7 +55,7 @@ layout: default
       {% endfor %}
 
       {% if paginator.next_page %}
-        <a href="{{ paginator.next_page_path }}">next</a>
+        <a href="{{ paginator.next_page_path }}" style="border-bottom: dotted orange;">next</a>
       {% endif %}
     {% endif %}
   </div>
