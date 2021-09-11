@@ -18,7 +18,7 @@ layout: default
             0x{{forloop.rindex}}
           {% endif %}
         </span>
-        
+
         <span class="post-meta">
           {{ post.date | date: "%Y/%m/%d" }} -
         </span>
@@ -33,7 +33,7 @@ layout: default
       <a href="some-test-page-index.html">html-js-learn-test-page-archive</a>
     </li>
   </ul>
-  <div class="pagination">
+  <div class="pagination" style="font-size: 20pt;">
     {% if paginator.total_pages > 1 %}
 
     {% for page in (1..paginator.total_pages) %}
