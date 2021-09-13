@@ -1,6 +1,11 @@
 > https://docs.microsoft.com/en-us/windows/desktop/win7appqual/preventing-hangs-in-windows-applications
 
-# Preventing Hangs in Windows Applications
+## ARR-Application Recovery and Restart
+ A time interval of 5 seconds is appropriate for most applications. **If an application registers a recovery function and specifies a 5-second timing interval, the recovery function is responsible for calling the keep-alive function at least once every 5 seconds until the recovery function is finished.** WER requires the keep-alive calls so that it can detect when the recovery function is hung or in a corrupted state. Failure to call the keep-alive function within the specified time interval can result in the application being terminated while the recovery function is still executing.
+
+
+
+## Preventing Hangs in Windows Applications
 
 > IsHungAppWindow()
 > DisableProcessWindowsGhosting ()
