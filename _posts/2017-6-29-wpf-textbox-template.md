@@ -1,6 +1,0 @@
-<ControlTemplate.Triggers>
-
-<Style.Triggers>
-
-
-
