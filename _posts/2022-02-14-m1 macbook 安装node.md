@@ -17,3 +17,10 @@
 3. `chmod a+w /dir_dir_dir`, 给普通用户添加写入权限，避免`npm -g` 安装包时权限不足报错
 4. `rm -rf /node_modules`，因为之前在arm模式下错误安装了包， 删除下重新安装
 5. 后续使用这个`terminal-intel` 来启动这个老node项目
+
+
+## 扩展
+
+1. 查找方案时， 也想过用其他包来替代 `node-sass`， 这篇文章详细比较了 `node-sass`,`dart-sass(js vm version)`, `dart-sass(dart vm version)`之间的性能比较， `dart-sass(js vm version)`直接使用当前js引擎执行，无兼容性问题， 但是耗时过大。  
+
+[Node-Sass or Dart-Sass : The CSS Preprocessor Dilemma](https://itnext.io/the-css-preprocessor-dilemma-node-sass-or-dart-sass-32a0a096572)
