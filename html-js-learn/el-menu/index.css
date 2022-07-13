@@ -1,0 +1,26 @@
+.my-header {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    background-color: lightpink;
+    align-content: center;
+}
+
+.my-main {
+    background-color: cadetblue;
+}
+
+.my-footer {
+    background-color: orange;
+}
+
+.el-icon-s-fold {
+    /* margin-left:-10px; */
+    font-size: 1.5em;
+    /*color:lightgray;*/
+}
+
+.el-icon-s-unfold {
+    /* margin-left: -10px; */
+    font-size: 1.5em;
+    /*color:lightgray;*/
+}

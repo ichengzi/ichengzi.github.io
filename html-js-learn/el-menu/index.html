@@ -1,0 +1,88 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>el-menu-demo</title>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui@2.12.0/lib/theme-chalk/index.css">
+    <!-- vue -->
+    <script src="https://unpkg.com/vue@2.6.10/dist/vue.js"></script>
+    <!-- 引入组件库 -->
+    <script src="https://unpkg.com/element-ui@2.12.0/lib/index.js"></script>
+</head>
+
+<!-- 参考： https://blog.csdn.net/Shids_/article/details/112701159 -->
+<!-- https://blog.csdn.net/qq_36422171/article/details/107713796 -->
+<!-- http://www.65535.fun/?p=385 -->
+
+<!-- el-aside width 默认 width 300px；
+1. 可以 `style='width: auto !important;'`处理，但是菜单折叠展开变动
+2. 可以 `:width="isCollapse? '66px': '200px'"`, 手动修改width， 让 aside 宽度和 menu 一致 -->
+
+<body>
+    <link rel="stylesheet" href="index.css">
+
+    <div id="appDiv">
+        <el-container>
+            <el-aside :width="isCollapse? '66px': '200px'">
+                <el-menu :collapse="isCollapse" :collapse-transition="false" background-color="#393e42"
+                    text-color="#fff" unique-opened>
+                    <el-submenu index="1">
+                        <template slot="title">
+                            <i class="el-icon-location"></i>
+                            <span>导航一</span>
+                        </template>
+                        <el-menu-item-group>
+                            <template slot="title">分组一</template>
+                            <el-menu-item index="1-1">选项1</el-menu-item>
+                            <el-menu-item index="1-2">选项2</el-menu-item>
+                        </el-menu-item-group>
+                        <el-menu-item-group title="分组2">
+                            <el-menu-item index="1-3">选项3</el-menu-item>
+                        </el-menu-item-group>
+                    </el-submenu>
+                    <el-menu-item index="3">
+                        <i class="el-icon-document"></i>
+                        <span slot="title">导航三</span>
+                    </el-menu-item>
+                    <el-menu-item index="4">
+                        <i class="el-icon-setting"></i>
+                        <span slot="title">导航四</span>
+                    </el-menu-item>
+            </el-aside>
+
+
+            <el-container >
+                <el-header height="40px" class="my-header">
+                    <div>
+                        <i class="el-icon-s-fold" v-on:click="isCollapse = true" v-show="!isCollapse"></i>
+                        <i class="el-icon-s-unfold" v-on:click="isCollapse = false" v-show="isCollapse"></i>
+                    </div>
+
+                    <div></div>
+
+                    <div style=" font-size: 14px;display:inline-block">
+                        <i class="el-icon-user-solid"></i>
+                        <span>user-name</span>
+                    </div>
+                </el-header>
+
+
+                <el-main class="my-main">
+                    <p>my main area</p>
+                </el-main>
+
+
+                <el-footer class="my-footer">
+                    <p> my footer</p>
+                </el-footer>
+            </el-container>
+        </el-container>
+    </div>
+    
+    <script src="index.js"></script>
+</body>
+
+</html>
