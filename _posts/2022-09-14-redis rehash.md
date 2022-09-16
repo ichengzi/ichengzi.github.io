@@ -5,7 +5,17 @@
 2. [https://tech.meituan.com/2018/07/27/redis-rehash-practice-optimization.html](https://tech.meituan.com/2018/07/27/redis-rehash-practice-optimization.html)
 
 
-> redis 的核心数据结构
+### redis sizeMask vs  java ju.hashmap 快速取模
+
+> 二进制运算的特殊性质，`if n = 2^x,  y%n  == y&(n-1)`. 计算机的 二进制与运算 比取模运算要快不少， 所以redis 和 java hashmap 用与运算替换取模运算提高性能。
+
+![redis sizeMask](/images/redis-sizemask.png)
+![redis mod](/images/redis-mod.png)
+
+![java hashmap table index](/images/hashmap-mod.png)
+
+
+### redis 的核心数据结构
 
 ```c
 // dict.h
