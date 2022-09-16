@@ -15,6 +15,17 @@
 ![java hashmap table index](/images/hashmap-mod.png)
 
 
+-------------
+
+
+### redis scan count
+
+1. `scan cursor count 10`
+2. scan 的返回可能会大于10
+3. redis是使用拉链法解决hash冲突的，当一个bucket 冲突严重, 有20个key时，这次scan会返回20个key
+
+--------------
+
 ### redis 的核心数据结构
 
 ```c
