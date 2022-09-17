@@ -1,3 +1,7 @@
+---
+tags: redis scan
+---
+
 ## redis 渐进式rehash  (incremental rehash)
 
 参考:
