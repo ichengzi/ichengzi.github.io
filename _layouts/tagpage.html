@@ -1,13 +1,14 @@
 ---
 layout: default
 ---
-<h3> All tags</h3>
+<h2> All tags</h2>
 
 {% for tag in site.tags %}
-  <h3 id="{{tag[0]}}">{{ tag[0] }} [{{tag[1].size}}]</h3>
-  <ul>
+  <h3 id="{{tag[0]}}">{{ tag[0] }}</h3>
+  <ol>
     {% for post in tag[1] %}
       <li>{{ post.date | date: "%Y/%m/%d" }} <a href="{{ post.url }}">{{ post.title }}</a></li>
     {% endfor %}
-  </ul>
+  </ol>
+  <br>
 {% endfor %}
