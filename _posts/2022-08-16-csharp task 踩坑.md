@@ -1,3 +1,7 @@
+---
+tags: dotnet dotnet4 task async
+---
+
 .net4 中使用 task 实现异步网络请求，避免阻塞 UI 线程， 但是.net4中对 task 的异常处理很奇怪，会导致应用终止。
 
 ### 修改前的代码
