@@ -6,7 +6,7 @@ tags: redis rate-limiter
 
 三种实现方式：
 
-### redis incr
+### 1.redis incr
 
 ``` java
 boolean incrCounter(key, limit, expire_seconds){
@@ -33,7 +33,7 @@ boolean incrCounter(key, limit, expire_seconds){
 1. incr 和 expire 非原子性，可能会出现key未设置过期时间
 2. 如果未设置过期时间， 可能会导致计数异常， 影响业务
 
-### redis list
+### 2.redis list
 
 ``` java
 boolean incrCounter(key, limit, expire_seconds){
@@ -64,7 +64,7 @@ boolean incrCounter(key, limit, expire_seconds){
 2. 每次incrCounter(), 都需要两次调用redis
 
 
-### redis lua 脚本
+### 3.redis lua 脚本
 
 ```lua
 local ts = tonumber(ARGV[1])
