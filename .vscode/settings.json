@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "*.cshtml": "html",
+        "*.conf": "properties",
+        "nginx*.conf": "nginx",
+        "unistd.h": "c"
+    }
+}
