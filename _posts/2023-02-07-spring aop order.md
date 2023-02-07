@@ -10,11 +10,11 @@ tags: spring aop java
 
 项目中也有个功能，通过切面B(around)来处理异常和log，两个切面需要切入到同一个方法。
 
-业务代码中， 通过 Assert 来校验参数， 实现了流程控制。
+业务代码中， 通过 Assert 来校验参数， 实现流程控制, 会频繁抛出业务校验异常。
 
-**上线后发现，运行顺序 B->A, 因为是在B中处理的异常， A中总是会走到一堆异常，导致不停告警。**
+**上线后发现，运行顺序 B->A->业务代码, 因为预期是在B中处理异常， 结果A中总是会走到一堆异常并且还log了异常，导致不停告警。**
 
-需要想办法， 调整顺序为 A->B->业务方法
+需要想办法， 调整顺序为 A->B->业务代码
 
 
 ## 排查spring中的多个切面是按什么顺序运行， 是否有办法调整？
@@ -24,6 +24,7 @@ tags: spring aop java
 2. clone spring code, `https://github.com/spring-projects/spring-framework.git`,  查看spring aop实现代码在 `AnnotationAwareAspectJAutoProxyCreator.java`
 
 3. 多层继承类， 真正实现代码在这里
+
 ```java
 // AbstractAdvisorAutoProxyCreator.getAdvicesAndAdvisorsForBean()
 protected Object[] getAdvicesAndAdvisorsForBean(
@@ -48,7 +49,8 @@ protected List<Advisor> findEligibleAdvisors(Class<?> beanClass, String beanName
 }
 ```
 
-4. OrderComparator
+4. `OrderComparator.java`
+
 ```java
 // OrderComparator.doCompare()
 private int doCompare(@Nullable Object o1, @Nullable Object o2, @Nullable OrderSourceProvider sourceProvider) {
@@ -138,8 +140,7 @@ public class DemoService{
 当多个切点切到同一个方法时，源码实现流程为：
 1. Spring容器启动时先注册AnnotationAwareAspectJAutoProxyCreator类的BeanDefinition（继承自后处理器BeanPostProcessor）
 2. 当程序开始调用实际的切面方法要生成bean实例时，会调用其postProcessAfterInitialization方法，此方法**创建代理替换了Bean实例**
-
-> AOP中没有规定不同切面的执行顺序，都是把切面打乱放进了List<Advisor>中, 从放入List中的顺序追溯，可知对应的是Spring加载类后**注册BeanDefinition的顺序**
+3. AOP中没有规定不同切面的执行顺序，都是把切面打乱放进了List<Advisor>中, 从放入List中的顺序追溯，可知对应的是Spring加载类后**注册BeanDefinition的顺序**
 
 ## 总结
 
