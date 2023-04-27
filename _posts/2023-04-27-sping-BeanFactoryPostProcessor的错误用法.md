@@ -92,6 +92,17 @@ shiro模块的Bean被提前加载是无法解决的，只能延迟其中注入�
 
 
 
+## Note
 
+[The Ioc Container](https://docs.spring.io/spring-framework/docs/4.3.5.RELEASE/spring-framework-reference/html/beans.html)
+    
+Make sure that the dependencies you inject that way are of the simplest kind only. @Configuration classes are processed quite early during the initialization of the context, and forcing a dependency to be injected this way may lead to unexpected early initialization. Whenever possible, resort to parameter-based injection, as in the preceding example.
 
+`Also, be particularly careful with BeanPostProcessor and BeanFactoryPostProcessor definitions through @Bean.` 
+
+Those should usually be declared as static @Bean methods, not triggering the instantiation of their containing configuration class. 
+
+Otherwise, @Autowired and @Value may not work on the configuration class itself, since it is possible to create it as a bean instance earlier than AutowiredAnnotationBeanPostProcessor.
+
+Otherwise, @Autowired and @Value won’t work on the configuration class itself since it is being created as a bean instance too early.
 
