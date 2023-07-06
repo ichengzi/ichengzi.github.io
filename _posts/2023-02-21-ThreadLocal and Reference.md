@@ -35,7 +35,7 @@ WeakReference如字面意思，弱引用， 当一个对象仅仅被weak referen
 有两个限制：
 
 1. expungeStaleEntry() 实现了回收逻辑，当线程执行threadLocal的读写时，会触发清理逻辑，但不是每次读写都一定触发。 如果线程死锁或阻塞，无法执行代码， 也就无法再执行清理逻辑。
-2. 如果key被定义为staic字段， 当类没有被卸载， 就不可能被GC回收，value也不可能释放。
+2. 如果key被定义为staic字段， 当类没有被卸载， 就不可能被GC回收，value也不可能释放(这种静态字段的threadLocal变量， 唯一释放的方法就是手动remove)。
 
 ```java
 // The entries in this hash map extend WeakReference, 
@@ -76,9 +76,9 @@ ThreadLocalMap 在get key hash冲突时去检查一下key的可达性， 决定�
 参考： [话说ReferenceQueue](https://hongjiang.info/java-referencequeue/)
 
 
-> 如果没有refQueue?
+> refQueue的作用?
 
-1. 如果没有refQueue， 为了确定哪些entry可以释放，就只能遍历  或 随机(threadLocalMap的方式)
+1. 没有refQueue， 为了确定哪些entry可以释放，就只能遍历  或 随机(threadLocalMap的方式)
 2. 有 refQueue， refQueue存放了可以释放的reference, 可以显著提升性能
 
 #### refQueue的生产消费机制
